@@ -15,10 +15,14 @@
     "lint:styles:fix": "stylelint --fix --ignore-path .gitignore '{**/*,*}.{css,sass,scss,md,html}'"
   },
   "dependencies": {
+    "@svgr/webpack": "^5.5.0",
     "classnames": "^2.2.6",
+    "file-loader": "^6.2.0",
     "next": "10.0.3",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "svgo-loader": "^2.2.1",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",

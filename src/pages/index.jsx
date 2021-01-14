@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import ExampleSvg from 'icons/example.inline.svg';
+
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -9,7 +11,7 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <ExampleSvg />
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
