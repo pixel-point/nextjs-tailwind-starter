@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import '../styles/app.scss';
 
 // eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
