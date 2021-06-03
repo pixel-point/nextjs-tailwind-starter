@@ -1,10 +1,4 @@
-const path = require('path');
-
 module.exports = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-    prependData: '@import "./src/styles/mixins.scss", "./src/styles/variables.scss";',
-  },
   images: {
     domains: ['avatars0.githubusercontent.com', 'avatars1.githubusercontent.com'],
   },
