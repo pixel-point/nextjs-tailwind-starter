@@ -1,34 +1,40 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
-    node: true,
+    es6: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'airbnb/hooks', 'airbnb/whitespace', 'prettier'],
+  extends: ['airbnb', 'airbnb/hooks', 'airbnb/whitespace', 'prettier'],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 12,
+    ecmaVersion: 2020,
     sourceType: 'module',
   },
   plugins: ['react'],
   rules: {
-    'react/jsx-uses-react': 'off',
-    'react/react-in-jsx-scope': 'off',
+    // Removes "default" from "restrictedNamedExports", original rule setup — https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/es6.js#L65
+    'no-restricted-exports': ['error', { restrictedNamedExports: ['then'] }],
+    'no-unused-vars': 'error',
     'no-shadow': 'off',
-    'object-curly-newline': [
-      'error',
-      {
-        ObjectExpression: { multiline: true, consistent: true },
-        ObjectPattern: { multiline: true, consistent: true },
-        ImportDeclaration: { multiline: true, consistent: true },
-        ExportDeclaration: { multiline: true, consistent: true },
-      },
-    ],
+    'no-undef': 'error',
+    'react/prop-types': 'error',
     'react/no-array-index-key': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/no-danger': 'off',
+    'react/forbid-prop-types': 'off',
+    // Changes values from "function-expression" to "arrow-function", original rule setup — https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react.js#L528
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
     'react/jsx-sort-props': [
       'error',
       {
@@ -64,7 +70,6 @@ module.exports = {
         },
       },
     ],
-    'no-unused-vars': ['error'],
   },
   settings: {
     'import/resolver': {

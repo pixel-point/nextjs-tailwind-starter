@@ -1,10 +1,13 @@
 module.exports = {
-  images: {
-    domains: ['avatars0.githubusercontent.com', 'avatars1.githubusercontent.com'],
-  },
+  poweredByHeader: false,
   webpack(config) {
+    // https://github.com/vercel/next.js/issues/25950#issuecomment-863298702
+    const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'));
+    fileLoaderRule.exclude = /\.svg$/;
+
     config.module.rules.push({
       test: /\.inline.svg$/,
+      issuer: /\.(js|jsx|ts|tsx)$/,
       use: [
         {
           loader: '@svgr/webpack',
@@ -13,8 +16,14 @@ module.exports = {
             svgoConfig: {
               plugins: [
                 {
-                  removeViewBox: false,
+                  name: 'preset-default',
+                  params: {
+                    overrides: {
+                      removeViewBox: false,
+                    },
+                  },
                 },
+                'prefixIds',
               ],
             },
           },
@@ -24,7 +33,7 @@ module.exports = {
 
     config.module.rules.push({
       test: /\.url.svg$/,
-      issuer: /\.\w+(?<!(s?c|sa)ss)$/i,
+      issuer: /\.(js|jsx|ts|tsx|css)$/,
       use: [
         {
           loader: require.resolve('url-loader'),
@@ -37,13 +46,6 @@ module.exports = {
         },
         {
           loader: require.resolve('svgo-loader'),
-          options: {
-            plugins: [
-              {
-                removeViewBox: false,
-              },
-            ],
-          },
         },
       ],
     });
