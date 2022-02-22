@@ -24,6 +24,7 @@ module.exports = {
                   },
                 },
                 'prefixIds',
+                'removeDimensions',
               ],
             },
           },
