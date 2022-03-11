@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const Seo = (props) => (
+const Seo = () => (
   <Head>
     <title>Create Next App</title>
     <link rel="icon" href="/favicon.ico" />
