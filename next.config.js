@@ -33,7 +33,7 @@ module.exports = {
     });
 
     config.module.rules.push({
-      test: /\.url.svg$/,
+      test: /\.svg$/,
       issuer: /\.(js|jsx|ts|tsx|css)$/,
       use: [
         {
