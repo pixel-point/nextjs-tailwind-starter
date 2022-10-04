@@ -7,8 +7,7 @@ module.exports = {
     fileLoaderRule.exclude = /\.svg$/;
 
     config.module.rules.push({
-      test: /\.inline.svg$/,
-      issuer: /\.(js|jsx|ts|tsx)$/,
+      test: /(?!inline).svg$/,
       use: [
         {
           loader: '@svgr/webpack',
