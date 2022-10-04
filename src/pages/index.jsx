@@ -2,7 +2,7 @@ import LayoutMain from 'layouts/layouts/layout-main';
 
 const Home = () => (
   <LayoutMain>
-    <div>Pixel Point Next.js Tailwind Starter</div>
+    <div className="text-lg">Pixel Point Next.js Tailwind Starter</div>
   </LayoutMain>
 );
 
