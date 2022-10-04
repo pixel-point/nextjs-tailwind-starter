@@ -37,7 +37,7 @@ module.exports = {
 
     config.module.rules.push({
       test: /\.svg$/,
-      exclude: /inline.svg$/,
+      exclude: /\.inline.svg$/,
       issuer: /\.(js|jsx|ts|tsx|css)$/,
       use: [
         {
