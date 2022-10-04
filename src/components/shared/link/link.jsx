@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import clsx from 'clsx';
-import * as NextLink from 'next/link';
+import NextLink from 'next/link';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -28,8 +28,8 @@ const Link = ({ className: additionalClassName, size, theme, to, children, ...pr
 
   if (to.startsWith('/')) {
     return (
-      <NextLink href={to} {...props}>
-        <a className={className}>{children}</a>
+      <NextLink className={className} href={to} {...props}>
+        {children}
       </NextLink>
     );
   }

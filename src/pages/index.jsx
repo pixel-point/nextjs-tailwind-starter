@@ -1,12 +1,17 @@
 import React from 'react';
 
+import Link from 'components/shared/link';
 import ArrowIcon from 'icons/arrow.inline.svg';
-import LayoutMain from 'layouts/layouts/layout-main';
+import LayoutMain from 'layouts/layout-main';
 
 const Home = () => (
   <LayoutMain>
     <div className="text-lg">
-      Pixel Point Next.js Tailwind Starter <ArrowIcon className="ml-2 inline-flex w-5" />
+      <h1>Pixel Point Next.js Tailwind Starter</h1>
+      <Link className="text-[red] transition-colors duration-200 hover:text-[black]" to="/about-us">
+        Test Link
+        <ArrowIcon className="ml-2 inline-flex w-5" />
+      </Link>
     </div>
   </LayoutMain>
 );
