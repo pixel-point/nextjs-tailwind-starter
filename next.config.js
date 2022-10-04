@@ -1,5 +1,9 @@
 module.exports = {
   poweredByHeader: false,
+  trailingSlash: true,
+  experimental: {
+    newNextLinkBehavior: true,
+  },
   webpack(config) {
     // https://github.com/vercel/next.js/issues/25950#issuecomment-863298702
     const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'));
@@ -7,7 +11,6 @@ module.exports = {
 
     config.module.rules.push({
       test: /\.inline.svg$/,
-      issuer: /\.(js|jsx|ts|tsx)$/,
       use: [
         {
           loader: '@svgr/webpack',
@@ -34,6 +37,7 @@ module.exports = {
 
     config.module.rules.push({
       test: /\.svg$/,
+      exclude: /\.inline.svg$/,
       issuer: /\.(js|jsx|ts|tsx|css)$/,
       use: [
         {
