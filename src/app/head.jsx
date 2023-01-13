@@ -1,5 +1,5 @@
-import DefaultMetaTags from 'components/shared/default-meta-tags';
+import SEO from 'components/shared/seo';
 
-const Head = () => <DefaultMetaTags />;
+const Head = () => <SEO />;
 
 export default Head;
