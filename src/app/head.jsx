@@ -1,9 +1,5 @@
-const Head = () => (
-  <>
-    <title />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link rel="icon" href="/favicon.ico" />
-  </>
-);
+import DefaultMetaTags from 'components/shared/default-meta-tags';
+
+const Head = () => <DefaultMetaTags />;
 
 export default Head;
