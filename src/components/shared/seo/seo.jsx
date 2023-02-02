@@ -19,7 +19,7 @@ const SEO = ({ title = defaultTitle, description = defaultDescription }) => (
     <link rel="apple-touch-icon" sizes="256x256" href="/favicon/favicon-256x256.png" />
     <link rel="apple-touch-icon" sizes="384x384" href="/favicon/favicon-384x384.png" />
     <link rel="apple-touch-icon" sizes="512x512" href="/favicon/favicon-512x512.png" />
-    <link rel="manifest" href="/manifest.webmanifest" crossOrigin="anonymous" />
+    <link rel="manifest" href="/favicon/manifest.webmanifest" crossOrigin="anonymous" />
   </>
 );
 
