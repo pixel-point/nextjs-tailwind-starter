@@ -1,4 +1,5 @@
 import Link from 'components/shared/link';
+import getMetadata from 'utils/get-metadata';
 
 const Home = () => (
   <div>
@@ -6,5 +7,9 @@ const Home = () => (
     <Link to="about">About</Link>
   </div>
 );
+
+export const metadata = getMetadata({
+  title: 'Home Page',
+});
 
 export default Home;
