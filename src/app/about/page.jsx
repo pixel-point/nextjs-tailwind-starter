@@ -47,6 +47,6 @@ export async function generateMetadata() {
   return getMetadata({
     title: 'About - Next.js Tailwind Starter',
     description: 'Next.js Tailwind Starter',
-    pathname: '/',
+    pathname: '/about',
   });
 }
