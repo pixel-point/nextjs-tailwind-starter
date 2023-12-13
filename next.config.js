@@ -6,7 +6,7 @@ module.exports = {
 
     config.module.rules.push(
       {
-        test: /(?<!inline)\.svg$/i,
+        test: /(?<!inline)\.svg$/,
         use: [
           {
             loader: require.resolve('url-loader'),
@@ -22,8 +22,9 @@ module.exports = {
           },
         ],
       },
+
       {
-        test: /\.inline.svg$/i,
+        test: /\.inline.svg$/,
         use: [
           {
             loader: '@svgr/webpack',
@@ -40,6 +41,7 @@ module.exports = {
                     },
                   },
                   'prefixIds',
+                  'removeDimensions',
                 ],
               },
             },
