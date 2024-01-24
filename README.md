@@ -58,12 +58,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ```text
 ├── public
 ├── src
+│   ├── app
 │   ├── components
 │   │  ├── pages — React components that are being used specifically on a certain page
 │   │  └── shared — React components that are being used across the whole website
 │   ├── hooks
 │   ├── images
-│   ├── pages
 │   ├── styles
 │   ├── utils
 ├── next.config.js — Main configuration file for a Next.js site. Read more about it [here](https://nextjs.org/docs/api-reference/next.config.js/introduction)
