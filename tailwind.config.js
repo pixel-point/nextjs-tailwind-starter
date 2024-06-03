@@ -17,19 +17,25 @@ module.exports = {
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
-      // FIXME: Add colors which are used in the project. Make sure that they are prepared
-      // in the Figma and followed the naming "primary/secondary/gray-${number}"
-      // Example of correctly prepared colors in Figma — https://user-images.githubusercontent.com/20713191/143586876-5e834233-9639-4166-9811-b00e63820d98.png
-      black: '',
-      white: '',
+      black: '#0A0812',
+      white: '#FFFFFF',
       primary: {
-        1: '',
+        blue: '#243BB9',
+        green: '#4DB29A',
+        pink: '#BE6AA7',
+        orange: '#D8A87C',
       },
       secondary: {
-        1: '',
+        blue: '#3F57DA',
       },
-      gray: {
-        1: '',
+      grey: {
+        100: '#EFF1F6',
+        200: '#BDC4D1',
+      },
+      blue: {
+        100: '#3D79F5',
+        200: '#0054FF',
+        400: '#172136',
       },
     }),
     // FIXME: Check if the breakpoints ("screens") are correct for the project
