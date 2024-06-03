@@ -1,0 +1,96 @@
+@layer base {
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/inter/inter-light.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Inter Fallback';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Arial');
+    ascent-override: 91.25%;
+    descent-override: 22.74%;
+    line-gap-override: 0%;
+    size-adjust: 106.17%;
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/inter/inter-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Inter Fallback';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Arial');
+    ascent-override: 90%;
+    descent-override: 22.43%;
+    line-gap-override: 0%;
+    size-adjust: 107.64%;
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/inter/inter-medium.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Inter Fallback';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Arial');
+    ascent-override: 88.98%;
+    descent-override: 22.18%;
+    line-gap-override: 0%;
+    size-adjust: 108.87%;
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/fonts/inter/inter-semibold.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Inter Fallback';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Arial Bold');
+    ascent-override: 95.19%;
+    descent-override: 23.73%;
+    line-gap-override: 0%;
+    size-adjust: 101.77%;
+  }
+
+  @font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/aeonik/aeonik-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Aeonik Fallback';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Arial');
+    ascent-override: 91.72%;
+    descent-override: 20.71%;
+    line-gap-override: 0%;
+    size-adjust: 101.4%;
+  }
+}
