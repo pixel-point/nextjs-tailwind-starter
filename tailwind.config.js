@@ -44,6 +44,11 @@ module.exports = {
       sm: { max: '767px' },
       xs: { max: '413px' },
     },
+    extend: {
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(-208deg, rgba(109, 156, 246, 0.7) 0%, #ffffff 100%)',
+      },
+    },
   },
   plugins: [require('tailwindcss-safe-area')],
 };
