@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -8,7 +9,7 @@ module.exports = {
   theme: {
     fontFamily: {
       primary: ['Inter', 'Inter Fallback', ...defaultTheme.fontFamily.sans],
-      secondary: ['Aeonik', 'Aeonik Fallback', ...defaultTheme.fontFamily.mono],
+      secondary: ['Aeonik', 'Aeonik Fallback', ...defaultTheme.fontFamily.sans],
     },
     colors: ({ colors }) => ({
       inherit: colors.inherit,
@@ -35,14 +36,13 @@ module.exports = {
         400: '#172136',
       },
     }),
-    // FIXME: Check if the breakpoints ("screens") are correct for the project
     screens: {
-      xl: { max: '1439px' },
+      '2xl': { max: '1919px' },
+      xl: { max: '1535px' },
       lg: { max: '1279px' },
       md: { max: '1023px' },
       sm: { max: '767px' },
-      xs: { max: '639px' },
-      '2xs': { max: '413px' },
+      xs: { max: '413px' },
     },
   },
   plugins: [require('tailwindcss-safe-area')],
