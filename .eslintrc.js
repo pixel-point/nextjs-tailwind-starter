@@ -3,13 +3,7 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  extends: [
-    'airbnb',
-    'airbnb/hooks',
-    'airbnb/whitespace',
-    'prettier',
-    'plugin:@next/next/recommended',
-  ],
+  extends: ['airbnb', 'airbnb/hooks', 'prettier', 'plugin:@next/next/recommended'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
