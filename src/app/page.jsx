@@ -1,41 +1,27 @@
+
+// components
+import About from 'components/pages/home/about';
+import Hero from 'components/pages/home/hero';
+import Services from 'components/pages/home/services';
+import Testimonials from 'components/pages/home/testimonials';
 import getMetadata from 'utils/get-metadata';
 
 const Home = () => (
-  <section className="py-32 px-safe">
-    <div className="container sm:px-4">
-      <div className="mx-auto max-w-[680px] space-y-5">
-        <h1 className="text-4xl font-bold">Getting Started 🚀</h1>
-        <p className="text-lg">
-          Getting started with this project is as simple as cloning the repository and installing
-          the dependencies:
-        </p>
-        <pre className="overflow-x-auto rounded-md bg-[#000] p-4 text-[#fff]">
-          <code className="text-base">
-            git clone https://github.com/pixel-point/nextjs-tailwind-starter.git
-            <br />
-            cd nextjs-tailwind-starter
-            <br />
-            npm install
-            <br />
-            npm run dev
-          </code>
-        </pre>
-        <p className="text-lg">
-          We hope you find this starter useful, and we are always open to feedback and
-          contributions!
-        </p>
-      </div>
-    </div>
-  </section>
-);
+    <>
+      <Hero />
+      <About />
+      <Services />
+      <Testimonials />
+    </>
+  );
 
 export default Home;
 
 export async function generateMetadata() {
-  // FIXME: Add real data here
   return getMetadata({
-    title: 'Home - Next.js Tailwind Starter',
-    description: 'Next.js Tailwind Starter',
+    title: 'DevOptima - Streamlined Development and Automated Workflows',
+    description:
+      "Boost innovation with DevOptima's streamlined development, efficient automated workflows, and reliable scaling. Empower your team to achieve more, faster.",
     pathname: '/',
   });
 }
