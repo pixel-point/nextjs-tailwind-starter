@@ -7,11 +7,8 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      // FIXME: Add the real project font families, which are imported in the "fonts.css" file,
-      // and give them the human-readable names
-      sans: ['', ...defaultTheme.fontFamily.sans],
-      // FIXME: Remove the "mono" font family, if it is not used in the project
-      mono: ['', ...defaultTheme.fontFamily.mono],
+      primary: ['Inter', 'Inter Fallback', ...defaultTheme.fontFamily.sans],
+      secondary: ['Aeonik', 'Aeonik Fallback', ...defaultTheme.fontFamily.mono],
     },
     colors: ({ colors }) => ({
       inherit: colors.inherit,
