@@ -47,6 +47,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         'custom-gradient': 'linear-gradient(-208deg, rgba(109, 156, 246, 0.7) 0%, #ffffff 100%)',
+        'gradient-secondary':
+          'linear-gradient(to right, rgba(109, 156, 246, 0.7) 0%, rgba(195, 214, 251, 0.88) 16%, #ffffff 51%, rgba(208, 223, 252, 0.9) 81%, rgba(109, 156, 246, 0.7) 100%)',
       },
     },
   },
