@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply antialiased font-primary font-light text-grey-200 bg-black;
+    @apply antialiased font-primary font-light -tracking-[0.02em] text-grey-200 bg-black overflow-x-hidden;
   }
 
   main {
@@ -49,5 +49,9 @@
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-custom-gradient;
   }
 }
