@@ -3,11 +3,28 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
+import Button from 'components/shared/button';
 import Burger from 'components/shared/header/burger';
 import Link from 'components/shared/link';
 import MobileMenu from 'components/shared/mobile-menu';
-import GitHubIcon from 'svgs/github.inline.svg';
 import logo from 'svgs/logo.svg';
+
+import bgImage from './images/bg-pattern.webp';
+
+const links = [
+  {
+    name: 'About us',
+    href: '#about',
+  },
+  {
+    name: 'Services',
+    href: '#services',
+  },
+  {
+    name: 'Why DevOptima',
+    href: '#testimonials',
+  },
+];
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,34 +43,48 @@ const Header = () => {
 
   return (
     <>
-      <header className="absolute left-0 right-0 top-0 z-50 h-[64px] px-safe pt-safe">
-        <nav
-          className="container flex h-full items-center justify-between px-4"
-          aria-label="Global"
-        >
-          <Link href="/">
-            <Image src={logo} width={90} height={18} alt="NextJS logo" priority />
-          </Link>
-          <div className="flex gap-x-5 md:hidden">
-            <Link className="text-base font-semibold" href="/about">
-              About
-            </Link>
-            <span>|</span>
-            <Link
-              className="transition-opacity duration-200 hover:opacity-75"
-              href="https://github.com/pixel-point/nextjs-tailwind-starter"
-              target="__blank"
-              rel="noopener noreferrer"
-            >
-              <GitHubIcon className="h-6" />
-            </Link>
+      <header className="px-safe pt-safe">
+        <div className="container flex h-20 items-center justify-between relative">
+          <div className="absolute -z-[1] top-0 -left-[103px] flex-none flex justify-center overflow-hidden pointer-events-none">
+            <div className="w-[2292px] flex-none flex justify-start">
+              <Image
+                className=""
+                src={bgImage}
+                alt="Hero section background pattern contained grid images with blue dots"
+                width={2292}
+                height={763}
+              />
+            </div>
           </div>
-          <Burger
-            className="hidden md:block"
-            isToggled={isMobileMenuOpen}
-            onClick={toggleMobileMenu}
-          />
-        </nav>
+
+          <div className="absolute -z-[1] top-0 left-0 -translate-x-1/2 -translate-y-1/2 flex-none size-[800px] rounded-full bg-[#141C48]/60 blur-[400px] pointer-events-none" />
+
+          <Link href="/">
+            <Image src={logo} width={173} height={48} alt="DevOptima logo" priority />
+          </Link>
+
+          <nav className="flex items-center" aria-label="Global">
+            <ul className="flex items-center space-x-12">
+              {links.map((item, index) => (
+                <li key={`header-link-${index}`} className="leading-none">
+                  <Link href={item.href} size="base" theme="white">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <Burger
+              className="hidden md:block"
+              isToggled={isMobileMenuOpen}
+              onClick={toggleMobileMenu}
+            />
+          </nav>
+
+          <Button size="base" theme="primary-blue-outline">
+            Get started
+          </Button>
+        </div>
       </header>
       <MobileMenu isOpen={isMobileMenuOpen} onClick={toggleMobileMenu} />
     </>
