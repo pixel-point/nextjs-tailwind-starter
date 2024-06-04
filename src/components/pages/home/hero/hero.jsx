@@ -6,14 +6,14 @@ import Form from './form';
 import heroImage from './images/hero-img.webp';
 
 const Hero = () => (
-  <section className="container mx-auto mb-[200px]">
+  <section className="container mb-[200px]">
     <div className="flex space-x-10">
       <div className="flex-1 max-w-1/2 pt-[139px] flex flex-col space-y-9">
         <div className="flex flex-col space-y-7">
-          <h1 className="font-secondary text-7xl text-gradient">
+          <h1 className="text-7xl text-gradient">
             Revolutionize <br /> your DevOps journey <br /> with DevOptima
           </h1>
-          <p className="text-xl leading-normal">
+          <p className="description max-w-[689px]">
             Empower teams to innovate faster through streamlined development, efficient automated
             workflows, and reliable scaling.
           </p>

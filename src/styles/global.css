@@ -9,23 +9,27 @@
     @apply antialiased font-primary font-light -tracking-[0.02em] text-grey-200 bg-black overflow-x-hidden;
   }
 
-  main {
-    @apply pt-0;
+  h1,
+  h2 {
+    @apply font-secondary;
+  }
+
+  h2 {
+    @apply text-5xl leading-[1.125] text-white;
+  }
+
+  h3 {
+    @apply text-xl leading-tight text-white font-medium;
   }
 }
 
 @layer components {
   .container {
     @apply mx-auto w-full max-w-[1504px] px-4;
-
-    /* @screen 2xl {
-        @apply px-4;
-      } */
   }
 
-  .gap-x-grid {
-    /* FIXME: Specify the real grid "gap-x-" for each breakpoint */
-    @apply gap-x-10;
+  .description {
+    @apply text-xl leading-normal;
   }
 }
 
