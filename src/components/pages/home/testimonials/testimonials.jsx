@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 import firstTestimonialIcon from './images/testimonial-1.svg';
 import secondTestimonialIcon from './images/testimonial-2.svg';
-import firstTestimonialAuthorPhoto from './images/testimonial-avatar-1.png';
-import secondTestimonialAuthorPhoto from './images/testimonial-avatar-2.png';
-import testimonialsBgImage from './images/testimonials-bg.png';
+import firstTestimonialAuthorPhoto from './images/testimonial-avatar-1.webp';
+import secondTestimonialAuthorPhoto from './images/testimonial-avatar-2.webp';
+import testimonialsBgImage from './images/testimonials-bg.webp';
 import TestimonialItem from './testimonial-item';
 
 const testimonials = [

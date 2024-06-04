@@ -48,7 +48,6 @@ const Header = () => {
           <div className="absolute -z-[1] top-0 -left-[103px] flex-none flex justify-center overflow-hidden pointer-events-none">
             <div className="w-[2292px] flex-none flex justify-start">
               <Image
-                className=""
                 src={bgImage}
                 alt="Hero section background pattern contained grid images with blue dots"
                 width={2292}

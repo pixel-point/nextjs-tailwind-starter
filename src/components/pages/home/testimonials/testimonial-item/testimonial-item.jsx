@@ -15,7 +15,7 @@ const TestimonialItem = ({ author, text, icon }) => (
     />
 
     <div className="flex items-start space-x-3">
-      <div className="flex items-center justify-center rounded-full size-[44px] leading-none overflow-hidden">
+      <div className="flex items-center justify-center rounded-full size-11 leading-none overflow-hidden">
         <Image src={author.photo} alt={`${author.name} photo`} size={44} />
       </div>
 

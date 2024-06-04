@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
-import AutTestImg from './images/automating-testing.png';
-import CloudImg from './images/cloud-solutions.png';
-import IntegrationImg from './images/integration-and-deployment.png';
+import AutTestImg from './images/automating-testing.webp';
+import CloudImg from './images/cloud-solutions.webp';
+import IntegrationImg from './images/integration-and-deployment.webp';
 
 const services = [
   {
