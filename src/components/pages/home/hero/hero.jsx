@@ -10,7 +10,7 @@ const Hero = () => (
     <div className="flex space-x-10">
       <div className="flex-1 max-w-1/2 pt-[139px] flex flex-col space-y-9">
         <div className="flex flex-col space-y-7">
-          <h1 className="text-7xl text-gradient">
+          <h1 className="text-7xl text-gradient bg-custom-gradient">
             Revolutionize <br /> your DevOps journey <br /> with DevOptima
           </h1>
           <p className="description max-w-[689px]">
