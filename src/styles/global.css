@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth selection:bg-primary-blue/40;
+  }
+
   body {
     @apply antialiased font-primary font-light -tracking-[0.02em] text-grey-200 bg-black overflow-x-hidden;
   }
