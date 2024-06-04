@@ -4,7 +4,7 @@ import Features from './features';
 import aboutImg from './images/about-img.webp';
 
 const About = () => (
-  <section className="container mb-[152px]">
+  <section id="about" className="container mb-[152px]">
     <div className="min-h-[619px] flex items-center space-x-[86px]">
       <div className="max-w-[630px] flex justify-end">
         <Image
