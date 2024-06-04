@@ -15,7 +15,7 @@
 
   h1,
   h2 {
-    @apply font-secondary;
+    @apply font-secondary -tracking-[0.01em];
   }
 
   h2 {
@@ -34,6 +34,10 @@
 
   .description {
     @apply text-xl leading-normal;
+  }
+
+  .decorative-circle {
+    @apply absolute -z-[1] flex-none size-[800px] rounded-full bg-[#141C48]/60 blur-[400px] pointer-events-none;
   }
 }
 
@@ -60,6 +64,6 @@
   }
 
   .text-gradient {
-    @apply text-transparent bg-clip-text bg-custom-gradient;
+    @apply text-transparent bg-clip-text;
   }
 }

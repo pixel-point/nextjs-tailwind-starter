@@ -57,7 +57,7 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="absolute -z-[1] top-0 left-0 -translate-x-1/2 -translate-y-1/2 flex-none size-[800px] rounded-full bg-[#141C48]/60 blur-[400px] pointer-events-none" />
+          <div className="decorative-circle top-0 left-0 -translate-x-1/2 -translate-y-1/2" />
 
           <Link href="/">
             <Image src={logo} width={173} height={48} alt="DevOptima logo" priority />
