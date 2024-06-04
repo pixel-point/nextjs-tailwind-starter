@@ -6,7 +6,7 @@ import React from 'react';
 
 const styles = {
   transition: 'transition-colors duration-200',
-  base: 'inline-flex font-normal leading-none hover:font-medium',
+  base: 'inline-flex gap-x-[10px] font-normal leading-none hover:font-medium',
   size: {
     base: 'text-base',
   },
@@ -15,7 +15,7 @@ const styles = {
   },
   theme: {
     white: 'text-white',
-    grey: 'text-grey',
+    grey: 'text-grey-200 hover:text-grey-100',
   },
 };
 
@@ -25,6 +25,7 @@ const Link = ({
   size = null,
   weight = null,
   theme = null,
+  icon: Icon = null,
   children,
   ...props
 }) => {
@@ -37,6 +38,8 @@ const Link = ({
     additionalClassName
   );
 
+  const iconElement = Icon ? <Icon width={16} height={16} aria-hidden="true" /> : null;
+
   /*
     Using next/link component only for internal navigation.
     https://github.com/vercel/next.js/blob/canary/errors/invalid-href-passed.md
@@ -44,6 +47,7 @@ const Link = ({
   if (href.toString().startsWith('/')) {
     return (
       <NextLink className={linkClassName} href={href} {...props}>
+        {iconElement}
         {children}
       </NextLink>
     );
@@ -51,6 +55,7 @@ const Link = ({
 
   return (
     <a className={linkClassName} href={href.toString()} {...props}>
+      {iconElement}
       {children}
     </a>
   );
@@ -62,6 +67,7 @@ Link.propTypes = {
   size: PropTypes.oneOf(Object.keys(styles.size)),
   weight: PropTypes.oneOf(Object.keys(styles.weight)),
   theme: PropTypes.oneOf(Object.keys(styles.theme)),
+  icon: PropTypes.elementType,
   children: PropTypes.node.isRequired,
 };
 
