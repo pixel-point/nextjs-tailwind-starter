@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import Input from 'components/shared/input';
+
 import heroImage from './images/hero-img.webp';
 
 const Hero = () => (
@@ -15,6 +17,10 @@ const Hero = () => (
             workflows, and reliable scaling.
           </p>
         </div>
+
+        <form>
+          <Input />
+        </form>
       </div>
       <div className="flex-1 max-w-1/2 pt-[91px] flex items-center justify-end">
         <div className="max-w-[589px]">
