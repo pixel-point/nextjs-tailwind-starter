@@ -5,15 +5,15 @@ import React from 'react';
 import Link from 'components/shared/link';
 
 const styles = {
-  base: 'inline-flex items-center justify-center text-base font-semibold leading-none text-white rounded-[40px] transition-all duration-300',
+  base: 'inline-flex items-center justify-center text-base font-semibold leading-none text-white rounded-[40px] outline-none transition-all duration-300',
   size: {
     base: 'px-9 py-4',
     small: 'px-9 py-[14px] border-none',
-    icon: 'p-0 size-[44px] rounded-full',
+    icon: 'p-0 size-[44px] border-none rounded-full',
   },
   theme: {
     'primary-blue-outline':
-      'bg-primary-blue/20 border border-primary-blue hover:bg-secondary-blue/50 hover:border-secondary-blue transition-all duration-300',
+      'bg-primary-blue/20 border border-primary-blue hover:bg-secondary-blue/50 hover:border-secondary-blue',
     'primary-blue-filled':
       'bg-primary-blue border border-primary-blue hover:bg-secondary-blue hover:border-secondary-blue',
     green: 'bg-primary-green',
