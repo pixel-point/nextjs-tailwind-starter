@@ -9,7 +9,7 @@ import MobileMenu from 'components/shared/mobile-menu';
 import GitHubIcon from 'svgs/github.inline.svg';
 import logo from 'svgs/logo.svg';
 
-const Header = () => {
+function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -58,6 +58,6 @@ const Header = () => {
       <MobileMenu isOpen={isMobileMenuOpen} onClick={toggleMobileMenu} />
     </>
   );
-};
+}
 
 export default Header;

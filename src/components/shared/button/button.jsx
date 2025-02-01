@@ -18,7 +18,7 @@ const styles = {
   theme: {},
 };
 
-const Button = ({ className, to, size, theme, children, ...otherProps }) => {
+function Button({ className, to, size, theme, children, ...otherProps }) {
   const Tag = to ? Link : 'button';
 
   return (
@@ -30,7 +30,7 @@ const Button = ({ className, to, size, theme, children, ...otherProps }) => {
       {children}
     </Tag>
   );
-};
+}
 
 Button.propTypes = {
   className: PropTypes.string,

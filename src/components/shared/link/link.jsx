@@ -18,20 +18,20 @@ const styles = {
   theme: {},
 };
 
-const Link = ({
+function Link({
   className: additionalClassName = null,
   href = null,
   size = null,
   theme = null,
   children,
   ...props
-}) => {
+}) {
   const linkClassName = clsx(
     styles.transition,
     size && theme && styles.base,
     size && styles.size[size],
     theme && styles.theme[theme],
-    additionalClassName
+    additionalClassName,
   );
 
   /*
@@ -51,7 +51,7 @@ const Link = ({
       {children}
     </a>
   );
-};
+}
 
 Link.propTypes = {
   className: PropTypes.string,
